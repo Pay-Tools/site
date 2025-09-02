@@ -197,7 +197,7 @@ const WebhooksSection = () => {
             <Card className="bg-slate-800 border-slate-700">
               <CardHeader>
                 <CardTitle className="text-white flex items-center">
-                  <Webhook className="w-5 h-5 mr-2 text-emerald-400" />
+                  <Webhook className="w-5 h-5 mr-2 text-blue-400" />
                   Histórico de Webhooks
                 </CardTitle>
               </CardHeader>
