@@ -35,8 +35,8 @@ const WebhooksSection = () => {
     },
     { 
       status: 'PAGO', 
-      color: 'bg-emerald-500', 
-      textColor: 'text-emerald-400',
+      color: 'bg-sky-500', 
+      textColor: 'text-sky-400',
       description: 'Pagamento concluído com sucesso',
       duration: 3000 
     }
