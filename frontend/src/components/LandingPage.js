@@ -294,6 +294,217 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Checkout Transparente Section */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Checkout Transparente</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Integre pagamentos diretamente em sua aplicação sem redirecionamentos
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Múltiplas Linguagens</h3>
+              <Tabs defaultValue="javascript" className="w-full">
+                <TabsList className="grid w-full grid-cols-4 bg-slate-800 border border-slate-700">
+                  <TabsTrigger value="javascript" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">JavaScript</TabsTrigger>
+                  <TabsTrigger value="python" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">Python</TabsTrigger>
+                  <TabsTrigger value="php" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">PHP</TabsTrigger>
+                  <TabsTrigger value="curl" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">cURL</TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="javascript" className="mt-6">
+                  <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
+                    <div className="flex items-center mb-4">
+                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <span className="text-sm text-slate-400">JavaScript/Node.js</span>
+                    </div>
+                    <pre className="text-sm text-slate-300 overflow-x-auto">
+                      <code>{`const response = await fetch('/api/transactions', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+    amount: 10000, // R$ 100,00
+    currency: 'BRL',
+    payment_method: 'credit_card',
+    customer: {
+      name: 'João Silva',
+      email: 'joao@email.com'
+    },
+    card: {
+      number: '4111111111111111',
+      exp_month: '12',
+      exp_year: '2025',
+      cvv: '123'
+    }
+  })
+});
+
+const transaction = await response.json();
+console.log(transaction.status); // 'approved'`}</code>
+                    </pre>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="python" className="mt-6">
+                  <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
+                    <div className="flex items-center mb-4">
+                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <span className="text-sm text-slate-400">Python</span>
+                    </div>
+                    <pre className="text-sm text-slate-300 overflow-x-auto">
+                      <code>{`import requests
+
+response = requests.post('/api/transactions', 
+  headers={
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  json={
+    'amount': 10000,  # R$ 100,00
+    'currency': 'BRL',
+    'payment_method': 'credit_card',
+    'customer': {
+      'name': 'João Silva',
+      'email': 'joao@email.com'
+    },
+    'card': {
+      'number': '4111111111111111',
+      'exp_month': '12',
+      'exp_year': '2025',
+      'cvv': '123'
+    }
+  }
+)
+
+transaction = response.json()
+print(transaction['status'])  # 'approved'`}</code>
+                    </pre>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="php" className="mt-6">
+                  <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
+                    <div className="flex items-center mb-4">
+                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <span className="text-sm text-slate-400">PHP</span>
+                    </div>
+                    <pre className="text-sm text-slate-300 overflow-x-auto">
+                      <code>{`<?php
+$data = [
+    'amount' => 10000, // R$ 100,00
+    'currency' => 'BRL',
+    'payment_method' => 'credit_card',
+    'customer' => [
+        'name' => 'João Silva',
+        'email' => 'joao@email.com'
+    ],
+    'card' => [
+        'number' => '4111111111111111',
+        'exp_month' => '12',
+        'exp_year' => '2025',
+        'cvv' => '123'
+    ]
+];
+
+$ch = curl_init('/api/transactions');
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+    'Authorization: Bearer YOUR_API_KEY'
+]);
+
+$response = curl_exec($ch);
+$transaction = json_decode($response, true);
+echo $transaction['status']; // 'approved'`}</code>
+                    </pre>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="curl" className="mt-6">
+                  <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
+                    <div className="flex items-center mb-4">
+                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <span className="text-sm text-slate-400">cURL</span>
+                    </div>
+                    <pre className="text-sm text-slate-300 overflow-x-auto">
+                      <code>{`curl -X POST /api/transactions \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -d '{
+    "amount": 10000,
+    "currency": "BRL", 
+    "payment_method": "credit_card",
+    "customer": {
+      "name": "João Silva",
+      "email": "joao@email.com"
+    },
+    "card": {
+      "number": "4111111111111111",
+      "exp_month": "12",
+      "exp_year": "2025", 
+      "cvv": "123"
+    }
+  }'`}</code>
+                    </pre>
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </div>
+
+            <div className="space-y-6">
+              <Card className="bg-slate-800 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center">
+                    <Shield className="w-5 h-5 mr-2 text-emerald-400" />
+                    Segurança PCI DSS
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300">Todos os dados de cartão são processados de forma segura seguindo os padrões PCI DSS Level 1.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-slate-800 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center">
+                    <Zap className="w-5 h-5 mr-2 text-emerald-400" />
+                    Resposta Instantânea
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300">Receba a resposta da transação em menos de 1 segundo, direto na sua aplicação.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-slate-800 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center">
+                    <Globe className="w-5 h-5 mr-2 text-emerald-400" />
+                    Múltiplos Métodos
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300">Suporte para cartão de crédito, débito, PIX, boleto e carteiras digitais.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pagamento Recorrente Section */}
+      <RecurringPaymentSection />
+
+      {/* Webhooks Section */}
+      <WebhooksSection />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
