@@ -280,8 +280,8 @@ const WebhooksSection = () => {
                     <span className="text-blue-400">AUTORIZADO</span>
                   </div>
                   <div className="text-center p-2 bg-slate-700 rounded">
-                    <div className="w-4 h-4 bg-emerald-500 rounded-full mx-auto mb-1"></div>
-                    <span className="text-emerald-400">PAGO</span>
+                    <div className="w-4 h-4 bg-sky-500 rounded-full mx-auto mb-1"></div>
+                    <span className="text-sky-400">PAGO</span>
                   </div>
                 </div>
               </CardContent>
