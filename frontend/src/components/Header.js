@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X, Code, Zap } from "lucide-react";
+import AdaptiveLogo from "./AdaptiveLogo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
