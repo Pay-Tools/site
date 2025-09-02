@@ -115,7 +115,7 @@ const WebhooksSection = () => {
             <Card className="bg-slate-800 border-slate-700">
               <CardHeader>
                 <CardTitle className="text-white flex items-center">
-                  <CreditCard className="w-5 h-5 mr-2 text-emerald-400" />
+                  <CreditCard className="w-5 h-5 mr-2 text-blue-400" />
                   Transação em Andamento
                 </CardTitle>
               </CardHeader>
