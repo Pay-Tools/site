@@ -192,7 +192,7 @@ const PaymentFlowAnimation = () => {
                   })}
                 </div>
                 <div className="text-center animate-slide-in-right">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full flex items-center justify-center mb-4 animate-bounce shadow-lg shadow-emerald-500/50">
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center mb-4 animate-bounce shadow-lg shadow-blue-500/50">
                     <ArrowRight className="w-12 h-12 text-white" />
                   </div>
                   <p className="text-slate-300">Processando entrada...</p>
