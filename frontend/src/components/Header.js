@@ -20,11 +20,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_paytools-gateway/artifacts/doathdfz_Group%202%281%29.png" 
-              alt="PayTools Logo" 
-              className="h-10 w-auto"
-            />
+            <AdaptiveLogo className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
