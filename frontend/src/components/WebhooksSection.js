@@ -169,7 +169,7 @@ const WebhooksSection = () => {
                 
                 <div className="flex-1 relative mx-8">
                   <div className="h-1 bg-slate-700 rounded-full">
-                    <div className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full animate-pulse"></div>
+                    <div className="h-full bg-gradient-to-r from-blue-500 to-sky-500 rounded-full animate-pulse"></div>
                   </div>
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <div className="w-6 h-6 bg-emerald-500 rounded-full animate-ping"></div>
