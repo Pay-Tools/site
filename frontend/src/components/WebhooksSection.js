@@ -172,7 +172,7 @@ const WebhooksSection = () => {
                     <div className="h-full bg-gradient-to-r from-blue-500 to-sky-500 rounded-full animate-pulse"></div>
                   </div>
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-6 h-6 bg-emerald-500 rounded-full animate-ping"></div>
+                    <div className="w-6 h-6 bg-blue-500 rounded-full animate-ping"></div>
                   </div>
                   <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-emerald-500 text-white text-xs">
