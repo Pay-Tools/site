@@ -53,7 +53,7 @@ const Header = () => {
             >
               🌙
             </Button>
-            <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white font-semibold px-6 transition-all duration-300 transform hover:scale-105">
               <Code className="w-4 h-4 mr-2" />
               Try Free Sandbox
             </Button>
