@@ -98,10 +98,10 @@ export const mockData = {
   ],
 
   stats: [
-    { label: "Transactions/sec", value: "10,000+", change: "+15%" },
-    { label: "Uptime", value: "99.99%", change: "0%" },
-    { label: "Countries", value: "150+", change: "+5" },
-    { label: "Developers", value: "50,000+", change: "+2.3k" }
+    { label: "Payment Volume", value: "$2.4B+", change: "+32%" },
+    { label: "API Requests", value: "1M+/min", change: "+18%" },
+    { label: "Active Merchants", value: "25,000+", change: "+1.2k" },
+    { label: "Success Rate", value: "99.95%", change: "+0.02%" }
   ],
 
   testimonials: [
