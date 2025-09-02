@@ -40,19 +40,19 @@ const AdaptiveLogo = ({ className = "h-10 w-auto" }) => {
   const lightLogo = "https://customer-assets.emergentagent.com/job_paytools-gateway/artifacts/847hwine_Group%201%281%29.png";
 
   return (
-    <div className="relative">
-      {/* Logo for Dark Theme */}
+    <div className="relative inline-block">
+      {/* Logo for Dark Theme - Show when dark theme is active */}
       <img 
         src={darkLogo}
-        alt="PayTools Logo" 
-        className={`${className} transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}
+        alt="PayTools Logo (Dark Theme)" 
+        className={`${className} transition-all duration-500 ${isDark ? 'opacity-100 relative' : 'opacity-0 absolute inset-0 pointer-events-none'}`}
       />
       
-      {/* Logo for Light Theme */}
+      {/* Logo for Light Theme - Show when light theme is active */}
       <img 
         src={lightLogo}
-        alt="PayTools Logo" 
-        className={`${className} transition-opacity duration-300 ${!isDark ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}
+        alt="PayTools Logo (Light Theme)" 
+        className={`${className} transition-all duration-500 ${!isDark ? 'opacity-100 relative' : 'opacity-0 absolute inset-0 pointer-events-none'}`}
       />
     </div>
   );
