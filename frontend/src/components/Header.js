@@ -41,6 +41,18 @@ const Header = () => {
             <Button variant="ghost" className="text-slate-300 hover:text-white">
               Sign In
             </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => {
+                document.documentElement.classList.toggle('light');
+                // Force logo re-render by dispatching a custom event
+                window.dispatchEvent(new Event('theme-toggle'));
+              }}
+              className="text-slate-300 hover:text-white p-2"
+              title="Toggle Theme"
+            >
+              🌙
+            </Button>
             <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 transition-all duration-300 transform hover:scale-105">
               <Code className="w-4 h-4 mr-2" />
               Try Free Sandbox
