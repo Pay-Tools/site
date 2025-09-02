@@ -43,22 +43,22 @@ const PaymentFlowAnimation = () => {
     { 
       title: "Entrada do Pagamento", 
       description: "Cliente escolhe método de pagamento",
-      duration: 3000 
+      duration: 6000 
     },
     { 
       title: "Seleção da Adquirente", 
       description: "Sistema escolhe a melhor rota",
-      duration: 4000 
+      duration: 8000 
     },
     { 
       title: "Verificação Antifraude", 
       description: "Análise de segurança em tempo real",
-      duration: 3000 
+      duration: 6000 
     },
     { 
       title: "Pagamento Aprovado", 
       description: "Transação concluída com sucesso",
-      duration: 2000 
+      duration: 5000 
     }
   ];
 
