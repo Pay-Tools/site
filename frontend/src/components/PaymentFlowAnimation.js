@@ -17,6 +17,7 @@ import {
 const PaymentFlowAnimation = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [currentAcquirer, setCurrentAcquirer] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const paymentMethods = [
     { name: "Cartão de Crédito", icon: CreditCard, color: "from-blue-500 to-indigo-500" },
