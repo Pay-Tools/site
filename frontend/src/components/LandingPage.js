@@ -198,7 +198,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <Tabs defaultValue="checkout" className="w-full">
+          <Tabs defaultValue="transparent-checkout" className="w-full">
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-slate-800 border border-slate-700">
               {mockData.tools.map((tool, index) => (
                 <TabsTrigger 
