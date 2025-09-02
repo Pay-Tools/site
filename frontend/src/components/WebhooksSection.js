@@ -175,7 +175,7 @@ const WebhooksSection = () => {
                     <div className="w-6 h-6 bg-blue-500 rounded-full animate-ping"></div>
                   </div>
                   <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-emerald-500 text-white text-xs">
+                    <Badge className="bg-blue-500 text-white text-xs">
                       <Zap className="w-3 h-3 mr-1" />
                       Enviando Webhook
                     </Badge>
