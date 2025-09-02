@@ -222,7 +222,7 @@ const WebhooksSection = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <Badge className="bg-blue-500 text-white text-xs">✓ Enviado</Badge>
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
                       </div>
                     </div>
                   ))}
