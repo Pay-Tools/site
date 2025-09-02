@@ -137,18 +137,14 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Payment Flow Animation Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {mockData.stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-slate-400 mb-1">{stat.label}</div>
-                <div className="text-emerald-400 text-sm font-medium">{stat.change}</div>
-              </div>
-            ))}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Fluxo de Pagamento Inteligente</h2>
+            <p className="text-slate-300">Veja como processamos pagamentos com segurança e eficiência</p>
           </div>
+          <PaymentFlowAnimation />
         </div>
       </section>
 
