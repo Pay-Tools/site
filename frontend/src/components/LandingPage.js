@@ -30,30 +30,11 @@ const LandingPage = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
 
-  // CLI Animation Effect
+  // Gateway Dashboard Animation Effect
   useEffect(() => {
-    const commands = mockData.hero.cliCommands;
-    const currentCommandText = commands[currentCommand];
-    
-    if (isTyping && displayedText.length < currentCommandText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText(currentCommandText.slice(0, displayedText.length + 1));
-      }, 100);
-      return () => clearTimeout(timeout);
-    } else if (isTyping && displayedText.length === currentCommandText.length) {
-      const timeout = setTimeout(() => {
-        setIsTyping(false);
-      }, 2000);
-      return () => clearTimeout(timeout);
-    } else if (!isTyping) {
-      const timeout = setTimeout(() => {
-        setDisplayedText("");
-        setCurrentCommand((prev) => (prev + 1) % commands.length);
-        setIsTyping(true);
-      }, 1000);
-      return () => clearTimeout(timeout);
-    }
-  }, [currentCommand, displayedText, isTyping]);
+    // No longer needed for CLI, but keeping for consistency
+    // Animation is now handled by CSS animations and component rendering
+  }, []);
 
   const iconMap = {
     "shield-check": Shield,
