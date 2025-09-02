@@ -58,17 +58,17 @@ const LandingPage = () => {
         
         {/* Geometric Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-32 h-32 border border-emerald-400 rotate-45 animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 border border-cyan-400 rotate-12 animate-bounce"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 border border-blue-400 rotate-45 animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 border border-sky-400 rotate-12 animate-bounce"></div>
           <div className="absolute bottom-20 left-1/4 w-16 h-16 border border-orange-400 rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
-          <div className="absolute top-60 right-1/3 w-20 h-20 border border-emerald-400 animate-pulse"></div>
+          <div className="absolute top-60 right-1/3 w-20 h-20 border border-blue-400 animate-pulse"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center bg-slate-800 rounded-full px-4 py-2 mb-6">
-                <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-400 mr-2">New</Badge>
+                <Badge variant="secondary" className="bg-blue-500/20 text-blue-400 mr-2">New</Badge>
                 <span className="text-sm text-slate-300">uGo Facial Recognition Integration</span>
                 <ChevronRight className="w-4 h-4 ml-2 text-slate-400" />
               </div>
@@ -98,7 +98,7 @@ const LandingPage = () => {
               <div className="bg-slate-800 rounded-xl border border-slate-700 shadow-2xl overflow-hidden">
                 <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700 bg-slate-900/50">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-sky-400 rounded-lg flex items-center justify-center">
                       <Zap className="w-5 h-5 text-slate-900" />
                     </div>
                     <div>
@@ -107,8 +107,8 @@ const LandingPage = () => {
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                    <span className="text-xs text-emerald-400 font-medium">ONLINE</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <span className="text-xs text-blue-400 font-medium">ONLINE</span>
                   </div>
                 </div>
                 
@@ -123,7 +123,7 @@ const LandingPage = () => {
                       <div 
                         key={tx.id}
                         className={`flex items-center justify-between p-3 bg-slate-700 rounded-lg border transition-all duration-500 transform ${
-                          tx.status === 'approved' ? 'border-emerald-500/30 bg-emerald-500/10' : 
+                          tx.status === 'approved' ? 'border-blue-500/30 bg-blue-500/10' : 
                           tx.status === 'processing' ? 'border-orange-500/30 bg-orange-500/10 animate-pulse' : 
                           'border-slate-600'
                         }`}
@@ -133,7 +133,7 @@ const LandingPage = () => {
                       >
                         <div className="flex items-center space-x-3">
                           <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                            tx.status === 'approved' ? 'bg-emerald-500' : 
+                            tx.status === 'approved' ? 'bg-blue-500' : 
                             tx.status === 'processing' ? 'bg-orange-500' : 'bg-slate-600'
                           }`}>
                             {tx.status === 'approved' ? (
@@ -152,7 +152,7 @@ const LandingPage = () => {
                         <div className="text-right">
                           <div className="text-white font-semibold">{tx.amount}</div>
                           <div className={`text-xs capitalize ${
-                            tx.status === 'approved' ? 'text-emerald-400' : 
+                            tx.status === 'approved' ? 'text-blue-400' : 
                             tx.status === 'processing' ? 'text-orange-400' : 'text-slate-400'
                           }`}>
                             {tx.status === 'approved' ? 'Aprovado' : 
@@ -166,11 +166,11 @@ const LandingPage = () => {
                   {/* Real-time Metrics */}
                   <div className="grid grid-cols-3 gap-3 pt-4 border-t border-slate-700">
                     <div className="text-center">
-                      <div className="text-emerald-400 text-lg font-bold animate-pulse">98.9%</div>
+                      <div className="text-blue-400 text-lg font-bold animate-pulse">98.9%</div>
                       <div className="text-xs text-slate-400">Taxa de Sucesso</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-cyan-400 text-lg font-bold">0.8s</div>
+                      <div className="text-sky-400 text-lg font-bold">0.8s</div>
                       <div className="text-xs text-slate-400">Tempo Médio</div>
                     </div>
                     <div className="text-center">
@@ -182,16 +182,16 @@ const LandingPage = () => {
               </div>
               
               {/* Floating Status Indicators */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full p-3 animate-bounce shadow-lg">
+              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full p-3 animate-bounce shadow-lg">
                 <CheckCircle className="w-6 h-6 text-white" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full p-3 animate-pulse shadow-lg">
+              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full p-3 animate-pulse shadow-lg">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               
               {/* Data Flow Animation */}
-              <div className="absolute top-1/2 -right-8 w-16 h-1 bg-gradient-to-r from-emerald-400 to-transparent rounded-full">
-                <div className="w-3 h-3 bg-emerald-400 rounded-full absolute -top-1 left-0 animate-ping"></div>
+              <div className="absolute top-1/2 -right-8 w-16 h-1 bg-gradient-to-r from-blue-400 to-transparent rounded-full">
+                <div className="w-3 h-3 bg-blue-400 rounded-full absolute -top-1 left-0 animate-ping"></div>
               </div>
             </div>
           </div>
@@ -223,9 +223,9 @@ const LandingPage = () => {
             {mockData.features.map((feature, index) => {
               const IconComponent = iconMap[feature.icon];
               return (
-                <Card key={index} className="bg-slate-800 border-slate-700 hover:border-emerald-500/50 transition-all duration-300 group">
+                <Card key={index} className="bg-slate-800 border-slate-700 hover:border-blue-500/50 transition-all duration-300 group">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <CardTitle className="text-white">{feature.title}</CardTitle>
@@ -235,7 +235,7 @@ const LandingPage = () => {
                     <ul className="space-y-2">
                       {feature.details.map((detail, idx) => (
                         <li key={idx} className="flex items-center text-sm text-slate-300">
-                          <Check className="w-4 h-4 text-emerald-400 mr-2" />
+                          <Check className="w-4 h-4 text-blue-400 mr-2" />
                           {detail}
                         </li>
                       ))}
@@ -264,7 +264,7 @@ const LandingPage = () => {
                 <TabsTrigger 
                   key={index} 
                   value={tool.name.toLowerCase().replace(' ', '-')}
-                  className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white"
+                  className="data-[state=active]:bg-blue-500 data-[state=active]:text-white"
                 >
                   {tool.name}
                 </TabsTrigger>
@@ -277,13 +277,13 @@ const LandingPage = () => {
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-4">{tool.name}</h3>
                     <p className="text-slate-300 mb-6">{tool.description}</p>
-                    <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600">
+                    <Button className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600">
                       Learn More <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>
                   <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
                     <div className="flex items-center mb-4">
-                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <Terminal className="w-5 h-5 text-blue-400 mr-2" />
                       <span className="text-sm text-slate-400">Code Example</span>
                     </div>
                     <pre className="text-sm text-slate-300 overflow-x-auto">
@@ -312,16 +312,16 @@ const LandingPage = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Múltiplas Linguagens</h3>
               <Tabs defaultValue="javascript" className="w-full">
                 <TabsList className="grid w-full grid-cols-4 bg-slate-800 border border-slate-700">
-                  <TabsTrigger value="javascript" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">JavaScript</TabsTrigger>
-                  <TabsTrigger value="python" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">Python</TabsTrigger>
-                  <TabsTrigger value="php" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">PHP</TabsTrigger>
-                  <TabsTrigger value="curl" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">cURL</TabsTrigger>
+                  <TabsTrigger value="javascript" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">JavaScript</TabsTrigger>
+                  <TabsTrigger value="python" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">Python</TabsTrigger>
+                  <TabsTrigger value="php" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">PHP</TabsTrigger>
+                  <TabsTrigger value="curl" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">cURL</TabsTrigger>
                 </TabsList>
                 
                 <TabsContent value="javascript" className="mt-6">
                   <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
                     <div className="flex items-center mb-4">
-                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <Terminal className="w-5 h-5 text-blue-400 mr-2" />
                       <span className="text-sm text-slate-400">JavaScript/Node.js</span>
                     </div>
                     <pre className="text-sm text-slate-300 overflow-x-auto">
@@ -357,7 +357,7 @@ console.log(transaction.status); // 'approved'`}</code>
                 <TabsContent value="python" className="mt-6">
                   <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
                     <div className="flex items-center mb-4">
-                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <Terminal className="w-5 h-5 text-blue-400 mr-2" />
                       <span className="text-sm text-slate-400">Python</span>
                     </div>
                     <pre className="text-sm text-slate-300 overflow-x-auto">
@@ -394,7 +394,7 @@ print(transaction['status'])  # 'approved'`}</code>
                 <TabsContent value="php" className="mt-6">
                   <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
                     <div className="flex items-center mb-4">
-                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <Terminal className="w-5 h-5 text-blue-400 mr-2" />
                       <span className="text-sm text-slate-400">PHP</span>
                     </div>
                     <pre className="text-sm text-slate-300 overflow-x-auto">
@@ -433,7 +433,7 @@ echo $transaction['status']; // 'approved'`}</code>
                 <TabsContent value="curl" className="mt-6">
                   <div className="bg-slate-900 rounded-lg border border-slate-700 p-6">
                     <div className="flex items-center mb-4">
-                      <Terminal className="w-5 h-5 text-emerald-400 mr-2" />
+                      <Terminal className="w-5 h-5 text-blue-400 mr-2" />
                       <span className="text-sm text-slate-400">cURL</span>
                     </div>
                     <pre className="text-sm text-slate-300 overflow-x-auto">
@@ -465,7 +465,7 @@ echo $transaction['status']; // 'approved'`}</code>
               <Card className="bg-slate-800 border-slate-700">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center">
-                    <Shield className="w-5 h-5 mr-2 text-emerald-400" />
+                    <Shield className="w-5 h-5 mr-2 text-blue-400" />
                     Segurança PCI DSS
                   </CardTitle>
                 </CardHeader>
@@ -477,7 +477,7 @@ echo $transaction['status']; // 'approved'`}</code>
               <Card className="bg-slate-800 border-slate-700">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center">
-                    <Zap className="w-5 h-5 mr-2 text-emerald-400" />
+                    <Zap className="w-5 h-5 mr-2 text-blue-400" />
                     Resposta Instantânea
                   </CardTitle>
                 </CardHeader>
@@ -489,7 +489,7 @@ echo $transaction['status']; // 'approved'`}</code>
               <Card className="bg-slate-800 border-slate-700">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center">
-                    <Globe className="w-5 h-5 mr-2 text-emerald-400" />
+                    <Globe className="w-5 h-5 mr-2 text-blue-400" />
                     Múltiplos Métodos
                   </CardTitle>
                 </CardHeader>
@@ -509,14 +509,14 @@ echo $transaction['status']; // 'approved'`}</code>
       <WebhooksSection />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-cyan-900/20">
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-sky-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Building?</h2>
           <p className="text-xl text-slate-300 mb-8">
             Join thousands of developers using PayTools to power their payment infrastructure
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 text-lg">
+            <Button className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white font-semibold px-8 py-3 text-lg">
               <Code className="w-5 h-5 mr-2" />
               Try Free Sandbox
             </Button>
