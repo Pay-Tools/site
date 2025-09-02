@@ -533,11 +533,7 @@ echo $transaction['status']; // 'approved'`}</code>
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_paytools-gateway/artifacts/doathdfz_Group%202%281%29.png" 
-                  alt="PayTools Logo" 
-                  className="h-10 w-auto"
-                />
+                <AdaptiveLogo className="h-10 w-auto" />
               </div>
               <p className="text-slate-400 mb-4">
                 Next-generation payment infrastructure for developers.
