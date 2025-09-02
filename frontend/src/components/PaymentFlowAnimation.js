@@ -62,14 +62,22 @@ const PaymentFlowAnimation = () => {
     }
   ];
 
-  // Animation cycle
+  // Animation cycle with smooth transitions
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentStep < steps.length - 1) {
-        setCurrentStep(currentStep + 1);
-      } else {
-        setCurrentStep(0);
-      }
+      // Start transition
+      setIsTransitioning(true);
+      
+      // After transition animation, change step
+      setTimeout(() => {
+        if (currentStep < steps.length - 1) {
+          setCurrentStep(currentStep + 1);
+        } else {
+          setCurrentStep(0);
+        }
+        setIsTransitioning(false);
+      }, 600); // Transition duration
+      
     }, steps[currentStep].duration);
 
     return () => clearTimeout(timer);
