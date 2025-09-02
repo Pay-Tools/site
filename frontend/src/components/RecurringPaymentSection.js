@@ -104,7 +104,7 @@ const RecurringPaymentSection = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'active': return 'bg-emerald-500';
+      case 'active': return 'bg-blue-500';
       case 'past_due': return 'bg-orange-500';
       case 'canceled': return 'bg-red-500';
       default: return 'bg-slate-500';
@@ -145,13 +145,13 @@ const RecurringPaymentSection = () => {
             {steps.map((step, index) => (
               <div key={index} className={`flex items-center ${index < steps.length - 1 ? 'flex-1' : ''}`}>
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
-                  index <= currentStep ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white' : 'bg-slate-700 text-slate-400'
+                  index <= currentStep ? 'bg-gradient-to-r from-blue-500 to-sky-500 text-white' : 'bg-slate-700 text-slate-400'
                 }`}>
                   {index + 1}
                 </div>
                 {index < steps.length - 1 && (
                   <div className="flex-1 h-1 mx-4 bg-slate-700 rounded">
-                    <div className={`h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded transition-all duration-500 ${
+                    <div className={`h-full bg-gradient-to-r from-blue-500 to-sky-500 rounded transition-all duration-500 ${
                       index < currentStep ? 'w-full' : 'w-0'
                     }`} />
                   </div>
@@ -179,15 +179,15 @@ const RecurringPaymentSection = () => {
                     <CardHeader>
                       <CardTitle className="text-white flex items-center justify-between">
                         {plan.name}
-                        <Badge className="bg-emerald-500">{plan.interval}</Badge>
+                        <Badge className="bg-blue-500">{plan.interval}</Badge>
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-2xl font-bold text-emerald-400 mb-4">{plan.amount}</div>
+                      <div className="text-2xl font-bold text-blue-400 mb-4">{plan.amount}</div>
                       <ul className="space-y-2">
                         {plan.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-slate-300 text-sm">
-                            <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                          <li key={idx} className="flex items-center text-sm text-slate-300">
+                            <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                             {feature}
                           </li>
                         ))}
@@ -221,7 +221,7 @@ const RecurringPaymentSection = () => {
                     style={{ animationDelay: `${index * 0.5}s` }}
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center">
                         <Users className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -230,7 +230,7 @@ const RecurringPaymentSection = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <Badge className="bg-emerald-500 mb-2">Nova Assinatura</Badge>
+                      <Badge className="bg-blue-500 mb-2">Nova Assinatura</Badge>
                       <div className="text-slate-400 text-sm">Próxima cobrança: {sub.next_billing}</div>
                     </div>
                   </div>
@@ -258,7 +258,7 @@ const RecurringPaymentSection = () => {
                   <div 
                     key={sub.id}
                     className="p-4 bg-slate-700 rounded-lg border-l-4"
-                    style={{ borderLeftColor: sub.status === 'active' ? '#10b981' : sub.status === 'past_due' ? '#f59e0b' : '#ef4444' }}
+                    style={{ borderLeftColor: sub.status === 'active' ? '#3b82f6' : sub.status === 'past_due' ? '#f59e0b' : '#ef4444' }}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
@@ -314,13 +314,13 @@ const RecurringPaymentSection = () => {
                           </>
                         )}
                         {sub.status === 'past_due' && (
-                          <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600">
+                          <Button size="sm" className="bg-blue-500 hover:bg-blue-600">
                             <CreditCard className="w-3 h-3 mr-1" />
                             Cobrar Novamente
                           </Button>
                         )}
                         {sub.status === 'canceled' && (
-                          <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600">
+                          <Button size="sm" className="bg-sky-500 hover:bg-sky-600">
                             <Play className="w-3 h-3 mr-1" />
                             Reativar
                           </Button>
@@ -334,7 +334,7 @@ const RecurringPaymentSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className="text-slate-400">Assinaturas Ativas</span>
-                      <span className="text-emerald-400 font-bold">1</span>
+                      <span className="text-blue-400 font-bold">1</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-slate-400">Inadimplentes</span>
@@ -347,7 +347,7 @@ const RecurringPaymentSection = () => {
                     <div className="border-t border-slate-700 pt-4">
                       <div className="flex items-center justify-between">
                         <span className="text-slate-400">MRR (Receita Mensal)</span>
-                        <span className="text-emerald-400 font-bold text-lg">R$ 99,90</span>
+                        <span className="text-blue-400 font-bold text-lg">R$ 99,90</span>
                       </div>
                     </div>
                   </div>

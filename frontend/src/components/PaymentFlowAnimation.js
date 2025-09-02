@@ -21,7 +21,7 @@ const PaymentFlowAnimation = () => {
 
   const paymentMethods = [
     { name: "Cartão de Crédito", icon: CreditCard, color: "from-blue-500 to-indigo-500" },
-    { name: "PIX", icon: Smartphone, color: "from-green-500 to-emerald-500" }
+    { name: "PIX", icon: Smartphone, color: "from-blue-500 to-sky-500" }
   ];
 
   const acquirers = [
@@ -109,7 +109,7 @@ const PaymentFlowAnimation = () => {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
                   index <= currentStep
-                    ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white'
+                    ? 'bg-gradient-to-r from-blue-500 to-sky-500 text-white'
                     : 'bg-slate-700 text-slate-400'
                 }`}
               >
@@ -118,7 +118,7 @@ const PaymentFlowAnimation = () => {
               {index < steps.length - 1 && (
                 <div className="flex-1 h-1 mx-4 bg-slate-700 rounded">
                   <div
-                    className={`h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded transition-all duration-500 ${
+                    className={`h-full bg-gradient-to-r from-blue-500 to-sky-500 rounded transition-all duration-500 ${
                       index < currentStep ? 'w-full' : 'w-0'
                     }`}
                   />
@@ -134,11 +134,11 @@ const PaymentFlowAnimation = () => {
       </div>
 
       {/* Animation Area */}
-      <div className="bg-slate-800 rounded-xl border border-slate-700 p-8 min-h-[300px] relative overflow-hidden">
+      <div className="bg-slate-800 rounded-xl border border-slate-700 shadow-2xl p-8 min-h-[300px] relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 left-10 w-20 h-20 border border-emerald-400 rotate-45 animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-16 h-16 border border-cyan-400 animate-spin" style={{animationDuration: '20s'}}></div>
+          <div className="absolute top-10 left-10 w-20 h-20 border border-blue-400 rotate-45 animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-16 h-16 border border-sky-400 animate-spin" style={{animationDuration: '20s'}}></div>
         </div>
 
         <div className="relative z-10">
@@ -147,14 +147,14 @@ const PaymentFlowAnimation = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-slate-800/90 backdrop-blur-sm rounded-xl z-50 transition-all duration-600">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 relative">
-                  <div className="w-16 h-16 border-4 border-emerald-500/30 rounded-full animate-spin">
-                    <div className="w-4 h-4 bg-emerald-500 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
+                  <div className="w-16 h-16 border-4 border-blue-500/30 rounded-full animate-spin">
+                    <div className="w-4 h-4 bg-blue-500 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
                   </div>
                 </div>
                 <div className="flex space-x-1 justify-center">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ const PaymentFlowAnimation = () => {
                     return (
                       <Card 
                         key={index} 
-                        className={`bg-slate-700 border-slate-600 hover:border-emerald-500/50 transition-all duration-500 transform hover:scale-105 animate-slide-in-left ${
+                        className={`bg-slate-700 border-slate-600 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 animate-slide-in-left ${
                           index === 0 ? 'animate-pulse' : ''
                         }`}
                         style={{animationDelay: `${index * 0.2}s`}}
@@ -216,7 +216,7 @@ const PaymentFlowAnimation = () => {
                       key={index}
                       className={`p-4 rounded-lg border transition-all duration-500 transform animate-scale-in ${
                         index === currentAcquirer 
-                          ? 'border-emerald-500 bg-emerald-500/20 scale-110 shadow-lg shadow-emerald-500/30' 
+                          ? 'border-blue-500 bg-blue-500/20 scale-110 shadow-lg shadow-blue-500/30' 
                           : 'border-slate-600 bg-slate-700 hover:scale-105'
                       }`}
                       style={{animationDelay: `${index * 0.1}s`}}
@@ -228,7 +228,7 @@ const PaymentFlowAnimation = () => {
                 </div>
                 
                 <div className="mt-6 animate-slide-up">
-                  <Badge className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-2 shadow-lg">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-sky-500 text-white px-4 py-2 shadow-lg">
                     <Zap className="w-4 h-4 mr-2" />
                     {acquirers[currentAcquirer].name} Selecionada
                   </Badge>
@@ -257,7 +257,7 @@ const PaymentFlowAnimation = () => {
                         <div className="text-3xl mb-3 transform transition-transform hover:scale-125">{provider.logo}</div>
                         <h4 className="text-white font-semibold mb-2">{provider.name}</h4>
                         <div className="flex items-center justify-center space-x-2">
-                          <div className="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
                           <span className="text-slate-400 text-sm">Analisando...</span>
                         </div>
                       </CardContent>
@@ -266,8 +266,8 @@ const PaymentFlowAnimation = () => {
                 </div>
 
                 <div className="mt-6 flex items-center justify-center space-x-2 animate-slide-up">
-                  <Shield className="w-5 h-5 text-emerald-400" />
-                  <span className="text-emerald-400 font-semibold">Análise de Risco: Baixo</span>
+                  <Shield className="w-5 h-5 text-blue-400" />
+                  <span className="text-blue-400 font-semibold">Análise de Risco: Baixo</span>
                 </div>
               </div>
             )}
@@ -276,7 +276,7 @@ const PaymentFlowAnimation = () => {
             {currentStep === 3 && (
               <div className="text-center animate-fade-in">
                 <div className="mb-8">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center mb-4 animate-bounce shadow-lg shadow-emerald-500/50">
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center mb-4 animate-bounce shadow-lg shadow-blue-500/50">
                     <CheckCircle className="w-12 h-12 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2 animate-slide-up">Pagamento Aprovado!</h3>
@@ -293,12 +293,12 @@ const PaymentFlowAnimation = () => {
                     return (
                       <div 
                         key={index}
-                        className="bg-slate-700 rounded-lg p-4 border border-emerald-500/30 animate-scale-in shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
+                        className="bg-slate-700 rounded-lg p-4 border border-blue-500/30 animate-scale-in shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
                         style={{animationDelay: `${index * 0.2}s`}}
                       >
-                        <IconComponent className="w-6 h-6 text-emerald-400 mx-auto mb-2 transform transition-transform hover:scale-125" />
+                        <IconComponent className="w-6 h-6 text-blue-400 mx-auto mb-2 transform transition-transform hover:scale-125" />
                         <p className="text-xs text-slate-400">{item.label}</p>
-                        <p className="text-emerald-400 font-bold">{item.value}</p>
+                        <p className="text-blue-400 font-bold">{item.value}</p>
                       </div>
                     );
                   })}
@@ -309,8 +309,8 @@ const PaymentFlowAnimation = () => {
         </div>
 
         {/* Data Flow Lines */}
-        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-30">
-          <div className="absolute top-0 left-0 w-2 h-2 bg-emerald-400 rounded-full animate-ping" 
+        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-30">
+          <div className="absolute top-0 left-0 w-2 h-2 bg-blue-400 rounded-full animate-ping" 
                style={{ left: `${(currentStep / (steps.length - 1)) * 100}%` }}></div>
         </div>
       </div>
