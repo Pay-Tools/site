@@ -161,7 +161,7 @@ const WebhooksSection = () => {
             <div className="relative">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full flex items-center justify-center mb-2 animate-pulse">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center mb-2 animate-pulse">
                     <Server className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-sm text-slate-400">PayTools</p>
