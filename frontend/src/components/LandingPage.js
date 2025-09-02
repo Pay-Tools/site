@@ -21,7 +21,9 @@ import {
   TrendingUp,
   Users,
   Clock,
-  MapPin
+  MapPin,
+  CreditCard,
+  CheckCircle
 } from "lucide-react";
 import { mockData } from "../data/mock";
 
