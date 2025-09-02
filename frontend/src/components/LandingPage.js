@@ -3,6 +3,7 @@ import Header from "./Header";
 import PaymentFlowAnimation from "./PaymentFlowAnimation";
 import RecurringPaymentSection from "./RecurringPaymentSection";
 import WebhooksSection from "./WebhooksSection";
+import AdaptiveLogo from "./AdaptiveLogo";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
