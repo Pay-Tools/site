@@ -229,7 +229,7 @@ const WebhooksSection = () => {
                   
                   {/* Current Status Being Processed */}
                   {currentState && (
-                    <div className="flex items-center justify-between p-3 bg-slate-700 rounded-lg border-2 border-emerald-500/50 animate-pulse">
+                    <div className="flex items-center justify-between p-3 bg-slate-700 rounded-lg border-2 border-blue-500/50 animate-pulse">
                       <div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center ${currentState.color}`}>
                           {currentState.status === 'PROCESSANDO' && <Clock className="w-4 h-4 text-white animate-spin" />}
