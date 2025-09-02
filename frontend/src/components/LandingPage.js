@@ -107,31 +107,105 @@ const LandingPage = () => {
               </div>
             </div>
 
-            {/* Interactive CLI Terminal */}
+            {/* Modern Payment Gateway Dashboard */}
             <div className="relative">
-              <div className="bg-slate-800 rounded-lg border border-slate-700 shadow-2xl">
-                <div className="flex items-center px-4 py-3 border-b border-slate-700">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+              <div className="bg-slate-800 rounded-xl border border-slate-700 shadow-2xl overflow-hidden">
+                <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700 bg-slate-900/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-slate-900" />
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">PayTools Gateway</div>
+                      <div className="text-xs text-slate-400">Real-time Dashboard</div>
+                    </div>
                   </div>
-                  <div className="ml-4 text-sm text-slate-400">paytools-cli</div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span className="text-xs text-emerald-400 font-medium">ONLINE</span>
+                  </div>
                 </div>
-                <div className="p-6 font-mono">
-                  <div className="text-emerald-400 mb-2">$ {displayedText}<span className="animate-pulse">|</span></div>
-                  <div className="text-slate-500 text-sm">
-                    PayTools CLI - Payment infrastructure toolkit
+                
+                <div className="p-6 space-y-4">
+                  {/* Transaction Cards Animation */}
+                  <div className="space-y-3">
+                    {[
+                      { id: "TX001", amount: "R$ 250,00", method: "PIX", status: "approved", delay: 0 },
+                      { id: "TX002", amount: "R$ 1.299,99", method: "Cartão", status: "processing", delay: 1 },
+                      { id: "TX003", amount: "R$ 89,90", method: "PIX", status: "approved", delay: 2 }
+                    ].map((tx, index) => (
+                      <div 
+                        key={tx.id}
+                        className={`flex items-center justify-between p-3 bg-slate-700 rounded-lg border transition-all duration-500 transform ${
+                          tx.status === 'approved' ? 'border-emerald-500/30 bg-emerald-500/10' : 
+                          tx.status === 'processing' ? 'border-orange-500/30 bg-orange-500/10 animate-pulse' : 
+                          'border-slate-600'
+                        }`}
+                        style={{
+                          animation: `slideInRight 0.6s ease-out ${tx.delay * 0.3}s both`
+                        }}
+                      >
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                            tx.status === 'approved' ? 'bg-emerald-500' : 
+                            tx.status === 'processing' ? 'bg-orange-500' : 'bg-slate-600'
+                          }`}>
+                            {tx.status === 'approved' ? (
+                              <Check className="w-4 h-4 text-white" />
+                            ) : tx.status === 'processing' ? (
+                              <Clock className="w-4 h-4 text-white animate-spin" />
+                            ) : (
+                              <CreditCard className="w-4 h-4 text-white" />
+                            )}
+                          </div>
+                          <div>
+                            <div className="text-white text-sm font-medium">{tx.id}</div>
+                            <div className="text-slate-400 text-xs">{tx.method}</div>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-white font-semibold">{tx.amount}</div>
+                          <div className={`text-xs capitalize ${
+                            tx.status === 'approved' ? 'text-emerald-400' : 
+                            tx.status === 'processing' ? 'text-orange-400' : 'text-slate-400'
+                          }`}>
+                            {tx.status === 'approved' ? 'Aprovado' : 
+                             tx.status === 'processing' ? 'Processando' : 'Pendente'}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Real-time Metrics */}
+                  <div className="grid grid-cols-3 gap-3 pt-4 border-t border-slate-700">
+                    <div className="text-center">
+                      <div className="text-emerald-400 text-lg font-bold animate-pulse">98.9%</div>
+                      <div className="text-xs text-slate-400">Taxa de Sucesso</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-cyan-400 text-lg font-bold">0.8s</div>
+                      <div className="text-xs text-slate-400">Tempo Médio</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-orange-400 text-lg font-bold animate-pulse">+247</div>
+                      <div className="text-xs text-slate-400">Hoje</div>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              {/* Floating Data Flow Indicators */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full p-3 animate-bounce">
-                <Database className="w-6 h-6 text-slate-900" />
+              {/* Floating Status Indicators */}
+              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full p-3 animate-bounce shadow-lg">
+                <CheckCircle className="w-6 h-6 text-white" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-orange-400 to-red-400 rounded-full p-3 animate-pulse">
-                <Lock className="w-6 h-6 text-white" />
+              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full p-3 animate-pulse shadow-lg">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              
+              {/* Data Flow Animation */}
+              <div className="absolute top-1/2 -right-8 w-16 h-1 bg-gradient-to-r from-emerald-400 to-transparent rounded-full">
+                <div className="w-3 h-3 bg-emerald-400 rounded-full absolute -top-1 left-0 animate-ping"></div>
               </div>
             </div>
           </div>
