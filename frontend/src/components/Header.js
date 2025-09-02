@@ -94,7 +94,7 @@ const Header = () => {
                 <Button variant="ghost" className="w-full text-slate-300 hover:text-white">
                   Sign In
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold">
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white font-semibold">
                   <Code className="w-4 h-4 mr-2" />
                   Try Free Sandbox
                 </Button>
